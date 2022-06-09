@@ -139,6 +139,23 @@ var bodyBuilder = {
 
 // 3.a. Log out the the bodyBuilder's strength - the value should be 2.
 
+console.log(bodyBuilder['strength'])
+
 // 3.b. Use the workOut function to update the bodyBuilder's strenth.
 
+minutes = 10
+
+bodyBuilder.workOut(minutes)
+
+console.log(`Body builder worked out for ${minutes} minutes, strength now: ${bodyBuilder['strength']}`)
+
 // 3.c. Create another function on the bodyBuilder called `lazeAbout`, that takes in a number of hours as an argument. Decrease the bodyBuilder's strength by dividing the strength by the number of hours.
+
+bodyBuilder['lazeAbout'] = (hours) => {
+    bodyBuilder.strength = bodyBuilder.strength / hours
+    }
+
+hours = 2
+bodyBuilder.lazeAbout(hours)
+
+console.log(`Body builder lazed about for ${hours} hours, strength now: ${bodyBuilder['strength']}`)
